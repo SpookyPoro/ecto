@@ -1,35 +1,69 @@
-﻿# The script of the game goes in this file.
+﻿# Aqui é o script principal do jogo :)
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
+# Personagens
 
-define e = Character("Eileen")
+define anon = Character("?????")    # Pessoa desconhecida
+define main = Character("Hector")   # O protagonista da história
+define luci = Character("Lucid")    # Amiga de infância
+define mary = Character("Mary")     # Pregadora de peças/tsundere
+# define = Character("Wraith") #
+# define = Character() #
 
+# Flags
 
-# The game starts here.
+# Imagens
+image maid = "ph maid"
+
+# Aqui começa o jogo
 
 label start:
 
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
+    # Primeira cena, despertar do protagonista
 
-    # alguma coisa
+    play sound cicada
 
-    scene bg room
+    "..."
 
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
+    scene bg sun
+    with fade
 
-    show eileen happy
+    anon "Hector?"
 
-    # These display lines of dialogue.
+    anon "Hector??"
 
-    e "Você é um bobo :3"
+    anon "Hector???"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    anon "Hector can you hear me?"
 
-    # This ends the game.
+    anon "Hector...?"
 
+    "Where am I?"
+
+    "I can hear someone calling my name, but I have no idea of who can it be or even why I'm here."
+
+    "The sun feels nice on my skin though, just a little too bright."
+
+    stop sound fadeout 2.0
+
+    anon "Hector, can you hear me?"
+
+    "I recognize this voice. It's from an old friend of mine, Lucid."
+
+    show maid
+    with fade
+
+    luci "Hector! Thank God you woke up!"
+
+    "I try to get up but my arms couldn't exactly complete their task."
+
+    main "Lucid! Is that you? What was I doing on the floor? I can't remember exactly..."
+
+    "Lucid face was a mix of relief and guilty."
+
+    luci "Well... It was... an accident..."
+
+    "She said that while trying to hide a broom behind her back, with little success since the broom is really big for her small figure."
+
+
+    # Fim do jogo
     return

@@ -1,0 +1,40 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 20, in script
+    play sound cicada.ogg
+  File "renpy/common/000statements.rpy", line 268, in execute_play_sound
+    renpy.sound.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 32, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "game/script.rpy", line 20, in <module>
+    play sound cicada.ogg
+AttributeError: 'unicode' object has no attribute 'ogg'
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 20, in script
+    play sound cicada.ogg
+  File "C:\Users\felip\Downloads\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\ast.py", line 1949, in execute
+    self.call("execute")
+  File "C:\Users\felip\Downloads\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\ast.py", line 1937, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\felip\Downloads\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\statements.py", line 277, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 268, in execute_play_sound
+    renpy.sound.play(_audio_eval(p["file"]),
+  File "renpy/common/000statements.rpy", line 32, in _audio_eval
+    return eval(expr, locals=store.audio.__dict__)
+  File "C:\Users\felip\Downloads\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\python.py", line 2059, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "C:\Users\felip\Downloads\renpy-7.3.5-sdk.7z\renpy-7.3.5-sdk\renpy\python.py", line 2052, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 20, in <module>
+    play sound cicada.ogg
+AttributeError: 'unicode' object has no attribute 'ogg'
+
+Windows-8-6.2.9200
+Ren'Py 7.3.5.606
+ECTO 0.01 alpha
+Mon Apr 13 01:17:01 2020
